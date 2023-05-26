@@ -83,8 +83,8 @@ sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-
 sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-host=127.0.0.1 --mysql-port=3306 --mysql-user=systest --mysql-password="Welcome1" --mysql-db=sysbench --tables=20 --table_size=1000000 oltp_read_write --db-ps-mode=disable clean
 ```
 2) sysbench test 결과    
-트랜잭션이 read/write 환경에서 여러가지 조건(thread 50, 100등)으로 여러번 테스트를 진행해도 MySQL 1.5 ~ 2배까지 성능이 더 좋게 측정됨.
-(트랜잭션이 read만일 경우에는 MySQL이 약간 좋게 표시됨)    
+트랜잭션이 read/write 환경에서 여러가지 조건(thread 50, 100등)으로 여러번 테스트를 진행해도 MySQL 1.5 ~ 2배까지 성능이 더 좋게 측정됨.    
+(트랜잭션이 read만일 경우에는 MySQL이 약간 좋게 표시됨 tps기준 MySQL : 691.15 per sec, MariaDB : 616.84 per sec)    
 2) sysbench test 결과    
 - MySQL
 ![image](https://github.com/khkwon01/comp_db/assets/8789421/92687705-5a29-441c-a8f9-4181e0a01fad)
