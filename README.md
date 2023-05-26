@@ -88,5 +88,9 @@ sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-
 2) sysbench test 결과    
 - MySQL
 ![image](https://github.com/khkwon01/comp_db/assets/8789421/92687705-5a29-441c-a8f9-4181e0a01fad)
+![image](https://github.com/khkwon01/comp_db/assets/8789421/52d952e4-6671-46f5-96cc-106935c9cb7b)
+
 - MariaDB
 ![image](https://github.com/khkwon01/comp_db/assets/8789421/4a54bea3-c13d-484d-b40e-dca6ba13a899)
+![image](https://github.com/khkwon01/comp_db/assets/8789421/e939054c-df55-4644-b969-5ef479c5db46)
+
