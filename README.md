@@ -3,10 +3,11 @@
 MySQL 8.0.33과 Maria 10.8.8 버전 성능을 sysbench로 테스트 했을 경우 비교     
 
 ## 1. 테스트 환경
-1) OS 버전 : centos 7.9.2009 (core)    
+1) HW 정보 : cpu 1, mem : 8GB, network : 1Gbps
+2) OS 버전 : centos 7.9.2009 (core)    
 참고 : mariadb는 oracle linux 8.0에 설치 오류로 인해 설치가 안됨.
-2) my.cnf 구성    
-2.1) MySQL 설정
+3) my.cnf 구성    
+3.1) MySQL 설정
 ```
 [mysql]
 socket=/mysql/mysql8/mysql.sock
@@ -30,7 +31,7 @@ pid-file=/mysql/mysql8/mysql.pid
 #
 !includedir /etc/my.cnf.d
 ```
-2.2) Mariadb 설정
+3.2) Mariadb 설정
 ```
 [mysql]
 socket=/mysql/maria/mysql.sock
@@ -81,7 +82,8 @@ sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-
 ```
 sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-host=127.0.0.1 --mysql-port=3306 --mysql-user=systest --mysql-password="Welcome1" --mysql-db=sysbench --tables=20 --table_size=1000000 oltp_read_write --db-ps-mode=disable clean
 ```
-2) sysbench test 결과
+2) sysbench test 결과    
+여러가지 조건(thread 50, 100등)으로 여러번 테스트를 진행해도 MySQL 1.5 ~ 2배까지 성능이 더 좋게 측정됨.
 - MySQL
 ![image](https://github.com/khkwon01/comp_db/assets/8789421/92687705-5a29-441c-a8f9-4181e0a01fad)
 - MariaDB
