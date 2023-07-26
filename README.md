@@ -80,7 +80,7 @@ sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-
 ```
 - clean
 ```
-sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-host=127.0.0.1 --mysql-port=3306 --mysql-user=systest --mysql-password="Welcome1" --mysql-db=sysbench --tables=20 --table_size=1000000 oltp_read_write --db-ps-mode=disable clean
+sysbench --db-driver=mysql --time=50 --threads=100 --report-interval=20 --mysql-host=127.0.0.1 --mysql-port=3306 --mysql-user=systest --mysql-password="Welcome1" --mysql-db=sysbench --tables=20 --table_size=1000000 oltp_read_write --db-ps-mode=disable cleanup
 ```
 2) sysbench test 결과    
 트랜잭션이 read/write 환경에서 여러가지 조건(thread 50, 100등)으로 여러번 테스트를 진행해도 MySQL 1.5 ~ 2배까지 성능이 더 좋게 측정됨.    
